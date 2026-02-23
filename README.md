@@ -1,20 +1,22 @@
-# Asterisk IVR with Call Reporting
+# ERPNext Decimal Precision Control (v16)
 
-Production-ready IVR for Asterisk with SQL-based call reports.
+ERPNext allows very high decimal precision (up to 21+ digits) by design.
+This prevents rounding errors but often causes serious usability issues
+in business UI and reports.
 
-## Features
-- Custom IVR menu
-- Call logging to MySQL/MariaDB
-- Queue and agent reporting
-- Easy installation
-- Asterisk 16+
+This repository demonstrates:
+- ✅ Production-safe ways to control decimal precision
+- ⚠️ Internal experiments at database/schema level (educational only)
 
-## Use Cases
-- Call centers
-- Support hotlines
-- Sales IVR systems
+No ERPNext core files are modified in production-safe examples.
 
-## Installation
-```bash
-chmod +x install.sh
-./install.sh
+## Structure
+- `production_safe/` → Recommended approaches
+- `internal_overrides/` → Research & internal analysis (NOT for production)
+
+## Tested On
+- ERPNext v16
+- Frappe v16
+
+## License
+MIT
